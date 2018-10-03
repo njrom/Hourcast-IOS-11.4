@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import CoreLocation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CLLocationManagerDelegate {
 
     // IBOutlets for Selected Hours Weather 
     @IBOutlet weak var backgroundImageView: UIImageView!
-    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var selectedWeatherImageView: UIImageView!
     @IBOutlet weak var temperatureLabel: UILabel!
@@ -22,12 +23,23 @@ class ViewController: UIViewController {
     @IBOutlet var hourLabels : [UILabel]!
     @IBOutlet var hourStacks : [UIStackView]!
     
+
+    let WEATHER_URL = "https://api.openweathermap.org/data/2.5/forecast"
+    let APP_ID = "a87ba5e03928db05eebc6909808825ff"
     
-    var hourlyWeather = [HourWeather]()
     
+    let locationManager = CLLocationManager()
+    
+    let weatherFetcher = WeatherDataFetcher()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        
         
         if let stacks = hourStacks {
            for stack in stacks { // Adding Tapping abilities to each of the hour stacks
@@ -56,6 +68,21 @@ class ViewController: UIViewController {
             print("Error with stack linkage")
         }
         
+    }
+    
+    //Write the didUpdateLocations method here:
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) { // Last value in the CLLocation array is the most precise
+        let location = locations[locations.count - 1]
+        if location.horizontalAccuracy > 0 {
+            locationManager.stopUpdatingLocation()
+            locationManager.delegate = nil
+            print("longitude = \(location.coordinate.longitude), latitude = \(location.coordinate.latitude)")
+            let latitude = location.coordinate.latitude
+            let longitude = location.coordinate.longitude
+            let params : [String : String] = ["lat": String(latitude), "lon": String(longitude),"appid":APP_ID]
+            
+            weatherFetcher.fetchWeatherData(url: WEATHER_URL, parameters: params)
+        }
     }
     
     

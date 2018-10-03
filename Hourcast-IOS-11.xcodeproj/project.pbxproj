@@ -13,10 +13,14 @@
 		AF7E4EEB21640AEB00F11C58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF7E4EEA21640AEB00F11C58 /* Assets.xcassets */; };
 		AF7E4EEE21640AEB00F11C58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7E4EEC21640AEB00F11C58 /* LaunchScreen.storyboard */; };
 		AF7E4EF821642A5A00F11C58 /* HourWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7E4EF721642A5A00F11C58 /* HourWeather.swift */; };
-		AF9C508521645E7C006BFDFB /* WeatherDatafetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9C508421645E7C006BFDFB /* WeatherDatafetcher.swift */; };
+		AF9C508521645E7C006BFDFB /* WeatherDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9C508421645E7C006BFDFB /* WeatherDataFetcher.swift */; };
+		DBEB427A0447C4D6DFFD11D5 /* Pods_Hourcast_IOS_11.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B7D7B21B273F9F87BC730D0 /* Pods_Hourcast_IOS_11.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		516C478F02A3802E52FF615B /* Pods-Hourcast-IOS-11.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hourcast-IOS-11.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hourcast-IOS-11/Pods-Hourcast-IOS-11.release.xcconfig"; sourceTree = "<group>"; };
+		7B7D7B21B273F9F87BC730D0 /* Pods_Hourcast_IOS_11.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hourcast_IOS_11.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		824CBC17857458F0DD222C18 /* Pods-Hourcast-IOS-11.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hourcast-IOS-11.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hourcast-IOS-11/Pods-Hourcast-IOS-11.debug.xcconfig"; sourceTree = "<group>"; };
 		AF7E4EE021640AEA00F11C58 /* Hourcast-IOS-11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hourcast-IOS-11.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF7E4EE321640AEA00F11C58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF7E4EE521640AEA00F11C58 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,7 +29,7 @@
 		AF7E4EED21640AEB00F11C58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF7E4EEF21640AEB00F11C58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF7E4EF721642A5A00F11C58 /* HourWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourWeather.swift; sourceTree = "<group>"; };
-		AF9C508421645E7C006BFDFB /* WeatherDatafetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDatafetcher.swift; sourceTree = "<group>"; };
+		AF9C508421645E7C006BFDFB /* WeatherDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBEB427A0447C4D6DFFD11D5 /* Pods_Hourcast_IOS_11.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A794F9568F2561D426F21CE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				824CBC17857458F0DD222C18 /* Pods-Hourcast-IOS-11.debug.xcconfig */,
+				516C478F02A3802E52FF615B /* Pods-Hourcast-IOS-11.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AF7E4ED721640AEA00F11C58 = {
 			isa = PBXGroup;
 			children = (
 				AF7E4EE221640AEA00F11C58 /* Hourcast-IOS-11 */,
 				AF7E4EE121640AEA00F11C58 /* Products */,
+				4A794F9568F2561D426F21CE /* Pods */,
+				FF194FFAD8BDB832A986040E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +74,12 @@
 		AF7E4EE221640AEA00F11C58 /* Hourcast-IOS-11 */ = {
 			isa = PBXGroup;
 			children = (
-				AF7E4EE321640AEA00F11C58 /* AppDelegate.swift */,
-				AF7E4EE521640AEA00F11C58 /* ViewController.swift */,
-				AF7E4EE721640AEA00F11C58 /* Main.storyboard */,
-				AF7E4EEA21640AEB00F11C58 /* Assets.xcassets */,
-				AF7E4EEC21640AEB00F11C58 /* LaunchScreen.storyboard */,
-				AF7E4EEF21640AEB00F11C58 /* Info.plist */,
 				AF7E4EF921642F1C00F11C58 /* Model */,
+				AFFBEBD621652CB700885E21 /* Controller */,
+				AFFBEBD721652CD400885E21 /* View */,
+				AF7E4EEA21640AEB00F11C58 /* Assets.xcassets */,
+				AF7E4EEF21640AEB00F11C58 /* Info.plist */,
+				AF7E4EE321640AEA00F11C58 /* AppDelegate.swift */,
 			);
 			path = "Hourcast-IOS-11";
 			sourceTree = "<group>";
@@ -73,9 +88,34 @@
 			isa = PBXGroup;
 			children = (
 				AF7E4EF721642A5A00F11C58 /* HourWeather.swift */,
-				AF9C508421645E7C006BFDFB /* WeatherDatafetcher.swift */,
+				AF9C508421645E7C006BFDFB /* WeatherDataFetcher.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		AFFBEBD621652CB700885E21 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AF7E4EE521640AEA00F11C58 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AFFBEBD721652CD400885E21 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF7E4EE721640AEA00F11C58 /* Main.storyboard */,
+				AF7E4EEC21640AEB00F11C58 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FF194FFAD8BDB832A986040E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B7D7B21B273F9F87BC730D0 /* Pods_Hourcast_IOS_11.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,9 +125,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF7E4EF221640AEB00F11C58 /* Build configuration list for PBXNativeTarget "Hourcast-IOS-11" */;
 			buildPhases = (
+				23FA77EACEF4253DC7B44DE4 /* [CP] Check Pods Manifest.lock */,
 				AF7E4EDC21640AEA00F11C58 /* Sources */,
 				AF7E4EDD21640AEA00F11C58 /* Frameworks */,
 				AF7E4EDE21640AEA00F11C58 /* Resources */,
+				E6EA4DAB07B5D12444A08950 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -144,6 +186,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		23FA77EACEF4253DC7B44DE4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hourcast-IOS-11-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6EA4DAB07B5D12444A08950 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Hourcast-IOS-11/Pods-Hourcast-IOS-11-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hourcast-IOS-11/Pods-Hourcast-IOS-11-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AF7E4EDC21640AEA00F11C58 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -151,7 +234,7 @@
 			files = (
 				AF7E4EE621640AEA00F11C58 /* ViewController.swift in Sources */,
 				AF7E4EE421640AEA00F11C58 /* AppDelegate.swift in Sources */,
-				AF9C508521645E7C006BFDFB /* WeatherDatafetcher.swift in Sources */,
+				AF9C508521645E7C006BFDFB /* WeatherDataFetcher.swift in Sources */,
 				AF7E4EF821642A5A00F11C58 /* HourWeather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,9 +377,11 @@
 		};
 		AF7E4EF321640AEB00F11C58 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 824CBC17857458F0DD222C18 /* Pods-Hourcast-IOS-11.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 33A4PKE82K;
 				INFOPLIST_FILE = "Hourcast-IOS-11/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -311,9 +396,11 @@
 		};
 		AF7E4EF421640AEB00F11C58 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 516C478F02A3802E52FF615B /* Pods-Hourcast-IOS-11.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 33A4PKE82K;
 				INFOPLIST_FILE = "Hourcast-IOS-11/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

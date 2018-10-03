@@ -15,10 +15,12 @@ class HourWeather {
     var low : String
     var temperature : String
     var iconCondition : Int
+    var hour : String
     
-    init(name: String, date: String, temp: String, highNum : String, lowNum : String, condition : Int) {
+    init(date: String, eventHour: String , temp: String, highNum : String, lowNum : String, condition : Int) {
         
         dayDate = date
+        hour = eventHour
         high = highNum
         low = lowNum
         iconCondition = condition
@@ -81,7 +83,6 @@ class HourWeather {
         return "\(temp!.rounded())º"
     }
     
-    func readJSON
 
 }
 
