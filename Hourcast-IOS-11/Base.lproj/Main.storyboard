@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,32 +16,32 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Hourcast_IOS_11" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cloudy_Background" translatesAutoresizingMaskIntoConstraints="NO" id="3oB-km-iuF" userLabel="Background">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnu-p9-gMh">
-                                <rect key="frame" x="170.66666666666666" y="142" width="34.333333333333343" height="20.333333333333343"/>
+                                <rect key="frame" x="143" y="96.5" width="34.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.3042017487" green="0.3042017487" blue="0.3042017487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="64º" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2oE-jU-y6K">
-                                <rect key="frame" x="173.66666666666666" y="497.33333333333331" width="28" height="20.333333333333314"/>
+                                <rect key="frame" x="146" y="345" width="28" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.3042017487" green="0.3042017487" blue="0.3042017487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3v6-qD-MDU">
-                                <rect key="frame" x="100.66666666666667" y="75.333333333333329" width="174.33333333333331" height="52.666666666666671"/>
+                                <rect key="frame" x="73" y="45" width="174.5" height="52.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="45"/>
                                 <color key="textColor" red="0.3042017487" green="0.3042017487" blue="0.3042017487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="overcast" translatesAutoresizingMaskIntoConstraints="NO" id="7J3-i2-gnj">
-                                <rect key="frame" x="102.66666666666669" y="219.66666666666663" width="170" height="170"/>
+                                <rect key="frame" x="75" y="128" width="170" height="170"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="4b9-oA-9Ve">
                                         <variation key="heightClass=compact" constant="200"/>
@@ -78,12 +78,12 @@
                                 </variation>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="iQN-Sn-EIN" userLabel="Hourly Stack">
-                                <rect key="frame" x="45" y="619.66666666666663" width="285" height="80.333333333333371"/>
+                                <rect key="frame" x="17.5" y="421.5" width="285" height="80.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ENU-xl-C9y" userLabel="Hour Stack">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="80.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="80.5"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloudy2" translatesAutoresizingMaskIntoConstraints="NO" id="1aM-oG-6vJ">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snow4" translatesAutoresizingMaskIntoConstraints="NO" id="1aM-oG-6vJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="41k-iP-b7R"/>
@@ -111,7 +111,7 @@
                                                 </variation>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9 am" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKi-mn-4KI">
-                                                <rect key="frame" x="11" y="60.000000000000007" width="38.333333333333336" height="20.333333333333336"/>
+                                                <rect key="frame" x="11" y="60" width="38.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.3042017487" green="0.3042017487" blue="0.3042017487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -119,9 +119,9 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" tag="1" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hnn-bV-Hgi" userLabel="Hour Stack">
-                                        <rect key="frame" x="75" y="0.0" width="60" height="80.333333333333329"/>
+                                        <rect key="frame" x="75" y="0.0" width="60" height="80.5"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloudy2" translatesAutoresizingMaskIntoConstraints="NO" id="QN0-AD-0qC">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tstorm1" translatesAutoresizingMaskIntoConstraints="NO" id="QN0-AD-0qC">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="70" id="Uhu-VS-WKR"/>
@@ -145,41 +145,7 @@
                                                 </variation>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sH7-VO-ZdF">
-                                                <rect key="frame" x="7" y="60.000000000000007" width="46.333333333333336" height="20.333333333333336"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.3042017487" green="0.3042017487" blue="0.3042017487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" tag="2" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BCx-bj-BGM" userLabel="Hour Stack">
-                                        <rect key="frame" x="150" y="0.0" width="60" height="80.333333333333329"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloudy2" translatesAutoresizingMaskIntoConstraints="NO" id="V9E-Lx-r8K">
-                                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="60" id="DFo-i4-wri"/>
-                                                    <constraint firstAttribute="height" constant="70" id="eTK-8P-p5p"/>
-                                                    <constraint firstAttribute="width" constant="70" id="fhA-dV-EHJ"/>
-                                                    <constraint firstAttribute="height" constant="60" id="k2D-kN-gGG"/>
-                                                </constraints>
-                                                <variation key="default">
-                                                    <mask key="constraints">
-                                                        <exclude reference="eTK-8P-p5p"/>
-                                                        <exclude reference="fhA-dV-EHJ"/>
-                                                    </mask>
-                                                </variation>
-                                                <variation key="heightClass=compact">
-                                                    <mask key="constraints">
-                                                        <exclude reference="DFo-i4-wri"/>
-                                                        <include reference="eTK-8P-p5p"/>
-                                                        <include reference="fhA-dV-EHJ"/>
-                                                        <exclude reference="k2D-kN-gGG"/>
-                                                    </mask>
-                                                </variation>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZU-gw-5GZ">
-                                                <rect key="frame" x="10.333333333333343" y="60.000000000000007" width="39.333333333333336" height="20.333333333333336"/>
+                                                <rect key="frame" x="7" y="60" width="46.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.3042017487" green="0.3042017487" blue="0.3042017487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -187,9 +153,9 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" tag="3" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WYD-UD-6Pf" userLabel="Hour Stack">
-                                        <rect key="frame" x="225" y="0.0" width="60" height="80.333333333333329"/>
+                                        <rect key="frame" x="150" y="0.0" width="60" height="80.5"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloudy2" translatesAutoresizingMaskIntoConstraints="NO" id="Uvv-O5-Rwy">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tstorm3" translatesAutoresizingMaskIntoConstraints="NO" id="Uvv-O5-Rwy">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="EKX-y0-Ecv"/>
@@ -213,7 +179,41 @@
                                                 </variation>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6 pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XbB-Qb-yys">
-                                                <rect key="frame" x="10.333333333333314" y="60.000000000000007" width="39.333333333333336" height="20.333333333333336"/>
+                                                <rect key="frame" x="10.5" y="60" width="39.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.3042017487" green="0.3042017487" blue="0.3042017487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" tag="3" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RS6-yg-Ymp" userLabel="Hour Stack">
+                                        <rect key="frame" x="225" y="0.0" width="60" height="80.5"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tstorm3" translatesAutoresizingMaskIntoConstraints="NO" id="HfN-ys-Zhi">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="4xz-Vn-Dmp"/>
+                                                    <constraint firstAttribute="height" constant="60" id="KvC-ev-0aA"/>
+                                                    <constraint firstAttribute="width" constant="70" id="eZK-Vj-ZTp"/>
+                                                    <constraint firstAttribute="width" constant="60" id="jBy-RZ-loL"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="4xz-Vn-Dmp"/>
+                                                        <exclude reference="eZK-Vj-ZTp"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="constraints">
+                                                        <exclude reference="KvC-ev-0aA"/>
+                                                        <include reference="4xz-Vn-Dmp"/>
+                                                        <exclude reference="jBy-RZ-loL"/>
+                                                        <include reference="eZK-Vj-ZTp"/>
+                                                    </mask>
+                                                </variation>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6 pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pj9-fv-bma">
+                                                <rect key="frame" x="10.5" y="60" width="39.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.3042017487" green="0.3042017487" blue="0.3042017487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -257,14 +257,14 @@
                                 <exclude reference="74z-sM-XEQ"/>
                                 <exclude reference="OYb-hR-gev"/>
                                 <exclude reference="eaQ-Vt-pTI"/>
-                                <exclude reference="SCL-mc-j3v"/>
-                                <exclude reference="swq-JS-tAf"/>
-                                <exclude reference="PNS-Lv-k3o"/>
-                                <exclude reference="aMT-XK-cxg"/>
-                                <exclude reference="9Nl-GO-Dlo"/>
-                                <exclude reference="d6k-D4-Pn4"/>
                                 <exclude reference="iUh-md-MJM"/>
                                 <exclude reference="r3u-Wl-S5k"/>
+                                <exclude reference="SCL-mc-j3v"/>
+                                <exclude reference="swq-JS-tAf"/>
+                                <exclude reference="9Nl-GO-Dlo"/>
+                                <exclude reference="d6k-D4-Pn4"/>
+                                <exclude reference="PNS-Lv-k3o"/>
+                                <exclude reference="aMT-XK-cxg"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -274,22 +274,22 @@
                                 <exclude reference="CXU-kl-yPI"/>
                                 <include reference="OYb-hR-gev"/>
                                 <include reference="eaQ-Vt-pTI"/>
-                                <exclude reference="53c-yD-Ilp"/>
-                                <include reference="SCL-mc-j3v"/>
-                                <exclude reference="hQN-Ah-aA5"/>
-                                <include reference="swq-JS-tAf"/>
-                                <exclude reference="CCw-Y0-wpm"/>
-                                <include reference="PNS-Lv-k3o"/>
-                                <exclude reference="aMT-XK-cxg"/>
-                                <exclude reference="qM0-dz-3jg"/>
-                                <include reference="9Nl-GO-Dlo"/>
-                                <exclude reference="EeL-QS-ah8"/>
-                                <exclude reference="RVm-IX-Kgr"/>
-                                <include reference="d6k-D4-Pn4"/>
                                 <exclude reference="fEH-IO-z5F"/>
                                 <exclude reference="fSQ-jo-Ugw"/>
                                 <include reference="iUh-md-MJM"/>
                                 <include reference="r3u-Wl-S5k"/>
+                                <exclude reference="53c-yD-Ilp"/>
+                                <include reference="SCL-mc-j3v"/>
+                                <exclude reference="hQN-Ah-aA5"/>
+                                <include reference="swq-JS-tAf"/>
+                                <include reference="9Nl-GO-Dlo"/>
+                                <exclude reference="EeL-QS-ah8"/>
+                                <exclude reference="RVm-IX-Kgr"/>
+                                <include reference="d6k-D4-Pn4"/>
+                                <exclude reference="CCw-Y0-wpm"/>
+                                <include reference="PNS-Lv-k3o"/>
+                                <exclude reference="aMT-XK-cxg"/>
+                                <exclude reference="qM0-dz-3jg"/>
                             </mask>
                         </variation>
                     </view>
@@ -301,16 +301,16 @@
                         <outlet property="temperatureLabel" destination="2oE-jU-y6K" id="ZjU-rF-v2Y"/>
                         <outletCollection property="hourStacks" destination="ENU-xl-C9y" collectionClass="NSMutableArray" id="H3f-8m-Rmy"/>
                         <outletCollection property="hourStacks" destination="hnn-bV-Hgi" collectionClass="NSMutableArray" id="eYf-7d-YhL"/>
-                        <outletCollection property="hourStacks" destination="BCx-bj-BGM" collectionClass="NSMutableArray" id="cA5-OF-Tpd"/>
                         <outletCollection property="hourStacks" destination="WYD-UD-6Pf" collectionClass="NSMutableArray" id="cRi-K5-WMu"/>
                         <outletCollection property="hourImageViews" destination="1aM-oG-6vJ" collectionClass="NSMutableArray" id="FwX-Gd-u4G"/>
                         <outletCollection property="hourImageViews" destination="QN0-AD-0qC" collectionClass="NSMutableArray" id="0Og-ec-9VF"/>
-                        <outletCollection property="hourImageViews" destination="V9E-Lx-r8K" collectionClass="NSMutableArray" id="eus-Gl-iR4"/>
                         <outletCollection property="hourImageViews" destination="Uvv-O5-Rwy" collectionClass="NSMutableArray" id="qAg-Ta-VXy"/>
                         <outletCollection property="hourLabels" destination="wKi-mn-4KI" collectionClass="NSMutableArray" id="4Lq-4Z-zcv"/>
                         <outletCollection property="hourLabels" destination="sH7-VO-ZdF" collectionClass="NSMutableArray" id="tuB-JS-axr"/>
-                        <outletCollection property="hourLabels" destination="hZU-gw-5GZ" collectionClass="NSMutableArray" id="u1P-Gl-loM"/>
                         <outletCollection property="hourLabels" destination="XbB-Qb-yys" collectionClass="NSMutableArray" id="kRD-fx-aGP"/>
+                        <outletCollection property="hourImageViews" destination="HfN-ys-Zhi" collectionClass="NSMutableArray" id="GXM-gz-5f7"/>
+                        <outletCollection property="hourLabels" destination="Pj9-fv-bma" collectionClass="NSMutableArray" id="mUb-bh-cbO"/>
+                        <outletCollection property="hourStacks" destination="RS6-yg-Ymp" collectionClass="NSMutableArray" id="3nm-LV-DPO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -319,7 +319,9 @@
     </scenes>
     <resources>
         <image name="Cloudy_Background" width="375" height="812"/>
-        <image name="cloudy2" width="128" height="128"/>
         <image name="overcast" width="128" height="128"/>
+        <image name="snow4" width="128" height="128"/>
+        <image name="tstorm1" width="128" height="128"/>
+        <image name="tstorm3" width="128" height="128"/>
     </resources>
 </document>

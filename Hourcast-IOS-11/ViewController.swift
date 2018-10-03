@@ -23,37 +23,42 @@ class ViewController: UIViewController {
     @IBOutlet var hourStacks : [UIStackView]!
     
     
+    var hourlyWeather = [HourWeather]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
         if let stacks = hourStacks {
-           for stack in stacks {
+           for stack in stacks { // Adding Tapping abilities to each of the hour stacks
                 let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hourTapped(tapGestureRecognizer:)))
                 stack.isUserInteractionEnabled = true
                 stack.addGestureRecognizer(tapGestureRecognizer)
+            
             }
         } else {
             print("Error Hour Stacks were not linked properly")
         }
     }
     
-    @objc func hourTapped(tapGestureRecognizer: UITapGestureRecognizer)
-    {
+    
+    @objc func hourTapped(tapGestureRecognizer: UITapGestureRecognizer) {
         let tappedStack = tapGestureRecognizer.view as! UIStackView
+        for label in hourLabels {
+            label.backgroundColor = UIColor.clear //TODO: Fix this make it better
+        }
         if let index = hourStacks?.index(of: tappedStack) {
             print(index)
+            selectedWeatherImageView.image = hourImageViews[index].image
+            hourLabels[index].backgroundColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 0.5)
+            //TODO: implement switcher (current weather switches to weather at index)
         } else {
             print("Error with stack linkage")
-            
         }
-        // Your action
+        
     }
     
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     
 }

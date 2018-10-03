@@ -1,5 +1,5 @@
 //
-//  HourWeather.swift
+//  WeatherDatafetcher.swift
 //  Hourcast-IOS-11
 //
 //  Created by Nicholas Romano on 10/2/18.
@@ -7,7 +7,3 @@
 //
 
 import Foundation
-
-class HourWeather {
-    
-}
