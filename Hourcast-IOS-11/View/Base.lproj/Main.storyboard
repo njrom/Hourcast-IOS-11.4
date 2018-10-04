@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,32 +16,29 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Hourcast_IOS_11" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cloudy_Background" translatesAutoresizingMaskIntoConstraints="NO" id="3oB-km-iuF" userLabel="Background">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4/20/18" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnu-p9-gMh">
-                                <rect key="frame" x="130.5" y="96.5" width="59.5" height="20.5"/>
+                                <rect key="frame" x="130.5" y="80" width="59.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.3042017487" green="0.3042017487" blue="0.3042017487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="69º" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2oE-jU-y6K">
-                                <rect key="frame" x="146" y="345.5" width="28" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Weather..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2oE-jU-y6K">
+                                <rect key="frame" x="88.5" y="290" width="143" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.3042017487" green="0.3042017487" blue="0.3042017487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3v6-qD-MDU">
-                                <rect key="frame" x="77.5" y="45.5" width="166" height="52.5"/>
+                                <rect key="frame" x="77" y="34" width="166" height="52.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="45"/>
                                 <color key="textColor" red="0.3042017487" green="0.3042017487" blue="0.3042017487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="overcast" translatesAutoresizingMaskIntoConstraints="NO" id="7J3-i2-gnj">
-                                <rect key="frame" x="75" y="128" width="170" height="170"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partly-cloudy-night" translatesAutoresizingMaskIntoConstraints="NO" id="7J3-i2-gnj">
+                                <rect key="frame" x="75" y="95" width="170" height="170"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="4b9-oA-9Ve">
                                         <variation key="heightClass=compact" constant="200"/>
@@ -78,12 +75,12 @@
                                 </variation>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="iQN-Sn-EIN" userLabel="Hourly Stack">
-                                <rect key="frame" x="17.5" y="421.5" width="285" height="80.5"/>
+                                <rect key="frame" x="17.5" y="351.5" width="285" height="77.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ENU-xl-C9y" userLabel="Hour Stack">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="80.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="77.5"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snow4" translatesAutoresizingMaskIntoConstraints="NO" id="1aM-oG-6vJ">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clear-night" translatesAutoresizingMaskIntoConstraints="NO" id="1aM-oG-6vJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="41k-iP-b7R"/>
@@ -110,18 +107,18 @@
                                                     </mask>
                                                 </variation>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9 am" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKi-mn-4KI">
-                                                <rect key="frame" x="11" y="60" width="38.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKi-mn-4KI">
+                                                <rect key="frame" x="26" y="60" width="8.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                 <color key="textColor" red="0.3042017487" green="0.3042017487" blue="0.3042017487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" tag="1" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hnn-bV-Hgi" userLabel="Hour Stack">
-                                        <rect key="frame" x="75" y="0.0" width="60" height="80.5"/>
+                                        <rect key="frame" x="75" y="0.0" width="60" height="77.5"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tstorm1" translatesAutoresizingMaskIntoConstraints="NO" id="QN0-AD-0qC">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clear-night" translatesAutoresizingMaskIntoConstraints="NO" id="QN0-AD-0qC">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="70" id="Uhu-VS-WKR"/>
@@ -144,18 +141,18 @@
                                                     </mask>
                                                 </variation>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sH7-VO-ZdF">
-                                                <rect key="frame" x="7" y="60" width="46.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sH7-VO-ZdF">
+                                                <rect key="frame" x="26" y="60" width="8.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                 <color key="textColor" red="0.3042017487" green="0.3042017487" blue="0.3042017487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" tag="3" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WYD-UD-6Pf" userLabel="Hour Stack">
-                                        <rect key="frame" x="150" y="0.0" width="60" height="80.5"/>
+                                        <rect key="frame" x="150" y="0.0" width="60" height="77.5"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tstorm3" translatesAutoresizingMaskIntoConstraints="NO" id="Uvv-O5-Rwy">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partly-cloudy-night" translatesAutoresizingMaskIntoConstraints="NO" id="Uvv-O5-Rwy">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="EKX-y0-Ecv"/>
@@ -178,18 +175,18 @@
                                                     </mask>
                                                 </variation>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6 pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XbB-Qb-yys">
-                                                <rect key="frame" x="10.5" y="60" width="39.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XbB-Qb-yys">
+                                                <rect key="frame" x="26" y="60" width="8.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                 <color key="textColor" red="0.3042017487" green="0.3042017487" blue="0.3042017487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" tag="3" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RS6-yg-Ymp" userLabel="Hour Stack">
-                                        <rect key="frame" x="225" y="0.0" width="60" height="80.5"/>
+                                        <rect key="frame" x="225" y="0.0" width="60" height="77.5"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tstorm3" translatesAutoresizingMaskIntoConstraints="NO" id="HfN-ys-Zhi">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clear-day" translatesAutoresizingMaskIntoConstraints="NO" id="HfN-ys-Zhi">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="70" id="4xz-Vn-Dmp"/>
@@ -212,9 +209,9 @@
                                                     </mask>
                                                 </variation>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6 pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pj9-fv-bma">
-                                                <rect key="frame" x="10.5" y="60" width="39.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pj9-fv-bma">
+                                                <rect key="frame" x="26" y="60" width="8.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                 <color key="textColor" red="0.3042017487" green="0.3042017487" blue="0.3042017487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -223,7 +220,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.89918023767605637" green="0.90333406690140849" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="tnu-p9-gMh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.5:4" id="53c-yD-Ilp"/>
                             <constraint firstItem="3v6-qD-MDU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5sf-ci-SAK"/>
@@ -232,23 +229,19 @@
                             <constraint firstItem="iQN-Sn-EIN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="6.5:4" id="CCw-Y0-wpm"/>
                             <constraint firstItem="3v6-qD-MDU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1:4" id="CXU-kl-yPI"/>
                             <constraint firstItem="2oE-jU-y6K" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="5:4" id="EeL-QS-ah8"/>
-                            <constraint firstAttribute="trailing" secondItem="3oB-km-iuF" secondAttribute="trailing" id="LDj-HA-dCB"/>
                             <constraint firstItem="3v6-qD-MDU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1:2" id="OYb-hR-gev"/>
                             <constraint firstItem="iQN-Sn-EIN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PNS-Lv-k3o"/>
                             <constraint firstItem="2oE-jU-y6K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RVm-IX-Kgr"/>
                             <constraint firstItem="tnu-p9-gMh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1:2" id="SCL-mc-j3v"/>
-                            <constraint firstItem="3oB-km-iuF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VfX-1C-yNN"/>
                             <constraint firstItem="iQN-Sn-EIN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="6:4" id="aMT-XK-cxg"/>
                             <constraint firstItem="2oE-jU-y6K" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="d6k-D4-Pn4"/>
                             <constraint firstItem="3v6-qD-MDU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1:2" id="eaQ-Vt-pTI"/>
-                            <constraint firstItem="3oB-km-iuF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="egB-2L-EbW"/>
                             <constraint firstItem="7J3-i2-gnj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fEH-IO-z5F"/>
                             <constraint firstItem="7J3-i2-gnj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="3:4" id="fSQ-jo-Ugw"/>
                             <constraint firstItem="tnu-p9-gMh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hQN-Ah-aA5"/>
                             <constraint firstItem="7J3-i2-gnj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="3:4" id="iUh-md-MJM"/>
                             <constraint firstItem="iQN-Sn-EIN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qM0-dz-3jg"/>
                             <constraint firstItem="7J3-i2-gnj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="3:2" constant="1" id="r3u-Wl-S5k"/>
-                            <constraint firstAttribute="bottom" secondItem="3oB-km-iuF" secondAttribute="bottom" id="r6L-n3-IBL"/>
                             <constraint firstItem="tnu-p9-gMh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="3:4" id="swq-JS-tAf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -294,11 +287,10 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="backgroundImageView" destination="3oB-km-iuF" id="ou4-KO-Nt2"/>
                         <outlet property="dateLabel" destination="tnu-p9-gMh" id="o1d-Ym-efw"/>
-                        <outlet property="locationLabel" destination="3v6-qD-MDU" id="9rs-HX-dpd"/>
                         <outlet property="selectedWeatherImageView" destination="7J3-i2-gnj" id="qnd-Bh-e6e"/>
                         <outlet property="temperatureLabel" destination="2oE-jU-y6K" id="ZjU-rF-v2Y"/>
+                        <outlet property="titleLabel" destination="3v6-qD-MDU" id="xJi-zd-9D0"/>
                         <outletCollection property="hourStacks" destination="ENU-xl-C9y" collectionClass="NSMutableArray" id="H3f-8m-Rmy"/>
                         <outletCollection property="hourStacks" destination="hnn-bV-Hgi" collectionClass="NSMutableArray" id="eYf-7d-YhL"/>
                         <outletCollection property="hourStacks" destination="WYD-UD-6Pf" collectionClass="NSMutableArray" id="cRi-K5-WMu"/>
@@ -318,10 +310,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Cloudy_Background" width="375" height="812"/>
-        <image name="overcast" width="128" height="128"/>
-        <image name="snow4" width="128" height="128"/>
-        <image name="tstorm1" width="128" height="128"/>
-        <image name="tstorm3" width="128" height="128"/>
+        <image name="clear-day" width="512" height="512"/>
+        <image name="clear-night" width="512" height="512"/>
+        <image name="partly-cloudy-night" width="512" height="512"/>
     </resources>
 </document>

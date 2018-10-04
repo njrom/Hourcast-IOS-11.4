@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,15 +16,214 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lsA-XJ-Wk2">
+                                <rect key="frame" x="-15" y="130" width="350" height="280"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ome-fM-QQJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="70"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clear-day" translatesAutoresizingMaskIntoConstraints="NO" id="lkb-mB-jcp">
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="f6x-Oc-AC5"/>
+                                                    <constraint firstAttribute="width" constant="70" id="pfa-CJ-bRQ"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clear-night" translatesAutoresizingMaskIntoConstraints="NO" id="hDF-cn-ea8">
+                                                <rect key="frame" x="70" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="5F7-4o-Jpy"/>
+                                                    <constraint firstAttribute="height" constant="70" id="CkM-D3-Pwd"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloudy" translatesAutoresizingMaskIntoConstraints="NO" id="6We-vY-Mdj">
+                                                <rect key="frame" x="140" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="3u8-CR-B00"/>
+                                                    <constraint firstAttribute="height" constant="70" id="WWc-wQ-nvY"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fog-1" translatesAutoresizingMaskIntoConstraints="NO" id="R1V-55-LkN">
+                                                <rect key="frame" x="210" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="hMD-10-SQa"/>
+                                                    <constraint firstAttribute="height" constant="70" id="lln-DF-qYf"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clear-night" translatesAutoresizingMaskIntoConstraints="NO" id="Zux-Ah-zfF">
+                                                <rect key="frame" x="280" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="Wtr-ny-dch"/>
+                                                    <constraint firstAttribute="height" constant="70" id="bAR-H0-9x8"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2H4-Jy-MmB">
+                                        <rect key="frame" x="0.0" y="70" width="350" height="70"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partly-cloudy-day" translatesAutoresizingMaskIntoConstraints="NO" id="Mld-s9-STt">
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="QcK-si-tmc"/>
+                                                    <constraint firstAttribute="width" constant="70" id="UhR-vY-EYW"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sleet" translatesAutoresizingMaskIntoConstraints="NO" id="nc2-KP-Twg">
+                                                <rect key="frame" x="70" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="fk7-ea-K0v"/>
+                                                    <constraint firstAttribute="height" constant="70" id="ucc-D6-TOv"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partly-cloudy-night" translatesAutoresizingMaskIntoConstraints="NO" id="wme-qA-4GQ">
+                                                <rect key="frame" x="140" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="idj-FH-Cjh"/>
+                                                    <constraint firstAttribute="height" constant="70" id="zy4-mM-3PZ"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rain" translatesAutoresizingMaskIntoConstraints="NO" id="cYZ-XK-6Wh">
+                                                <rect key="frame" x="210" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="YPM-jC-hSg"/>
+                                                    <constraint firstAttribute="width" constant="70" id="dV5-JU-2EN"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sleet" translatesAutoresizingMaskIntoConstraints="NO" id="gEG-lv-BeH">
+                                                <rect key="frame" x="280" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="2ZJ-Lf-mjl"/>
+                                                    <constraint firstAttribute="width" constant="70" id="HIG-o7-mf0"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AFA-cU-D0g">
+                                        <rect key="frame" x="0.0" y="140" width="350" height="70"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snow" translatesAutoresizingMaskIntoConstraints="NO" id="MoQ-1w-w5o">
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="t6a-WL-OML"/>
+                                                    <constraint firstAttribute="height" constant="70" id="wqw-So-Tdt"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wind" translatesAutoresizingMaskIntoConstraints="NO" id="aAV-3x-uxh">
+                                                <rect key="frame" x="70" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="3qK-MK-YNG"/>
+                                                    <constraint firstAttribute="height" constant="70" id="RXj-bH-kQO"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partly-cloudy-day" translatesAutoresizingMaskIntoConstraints="NO" id="14C-ke-cRM">
+                                                <rect key="frame" x="140" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="9Of-SV-h0F"/>
+                                                    <constraint firstAttribute="height" constant="70" id="EFf-Td-qV1"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snow" translatesAutoresizingMaskIntoConstraints="NO" id="oqg-0I-70O">
+                                                <rect key="frame" x="210" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="SmP-Ao-SRW"/>
+                                                    <constraint firstAttribute="width" constant="70" id="mA2-bT-fD2"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wind" translatesAutoresizingMaskIntoConstraints="NO" id="z0u-KP-CPm">
+                                                <rect key="frame" x="280" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="8n3-sC-aHV"/>
+                                                    <constraint firstAttribute="width" constant="70" id="wzH-oT-B6t"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0KS-5f-tMd">
+                                        <rect key="frame" x="0.0" y="210" width="350" height="70"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clear-night" translatesAutoresizingMaskIntoConstraints="NO" id="ERW-XM-erx">
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="0at-qS-W4q"/>
+                                                    <constraint firstAttribute="width" constant="70" id="Pac-GO-aCM"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fog-1" translatesAutoresizingMaskIntoConstraints="NO" id="TdA-By-lqT">
+                                                <rect key="frame" x="70" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="Aif-p1-aiy"/>
+                                                    <constraint firstAttribute="width" constant="70" id="ltt-es-y2V"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloudy" translatesAutoresizingMaskIntoConstraints="NO" id="ENU-XW-Yne">
+                                                <rect key="frame" x="140" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="Lvz-60-mWZ"/>
+                                                    <constraint firstAttribute="height" constant="70" id="Whd-x8-iMa"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clear-night" translatesAutoresizingMaskIntoConstraints="NO" id="VuW-tw-IoT">
+                                                <rect key="frame" x="210" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="PgI-6f-ZCr"/>
+                                                    <constraint firstAttribute="width" constant="70" id="pqp-hg-qlp"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partly-cloudy-night" translatesAutoresizingMaskIntoConstraints="NO" id="Ij5-l6-b2r">
+                                                <rect key="frame" x="280" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="92o-5L-1Kt"/>
+                                                    <constraint firstAttribute="width" constant="70" id="wu8-eM-hbC"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hourcast Weather" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVu-uQ-h3R">
+                                <rect key="frame" x="6" y="58.5" width="309" height="43"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="36"/>
+                                <color key="textColor" red="0.3042017487" green="0.3042017487" blue="0.3042017487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CSC 214: Project 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9Q-kJ-Tx9">
+                                <rect key="frame" x="57.5" y="106.5" width="205" height="27.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
+                                <color key="textColor" red="0.3042017487" green="0.3042017487" blue="0.3042017487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.8991802377" green="0.90333406689999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lsA-XJ-Wk2" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="3Pp-2f-5PJ"/>
+                            <constraint firstItem="oVu-uQ-h3R" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="BLJ-fX-Cf3"/>
+                            <constraint firstItem="oVu-uQ-h3R" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" multiplier="1:3" id="e89-DI-lJQ"/>
+                            <constraint firstItem="e9Q-kJ-Tx9" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="f9V-Mh-49x"/>
+                            <constraint firstItem="e9Q-kJ-Tx9" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" multiplier="1:2" id="oeq-D8-wmk"/>
+                            <constraint firstItem="lsA-XJ-Wk2" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" multiplier="9:8" id="qZs-8u-IhD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.6305418719212"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="clear-day" width="512" height="512"/>
+        <image name="clear-night" width="512" height="512"/>
+        <image name="cloudy" width="512" height="512"/>
+        <image name="fog-1" width="512" height="512"/>
+        <image name="partly-cloudy-day" width="512" height="512"/>
+        <image name="partly-cloudy-night" width="512" height="512"/>
+        <image name="rain" width="512" height="512"/>
+        <image name="sleet" width="512" height="512"/>
+        <image name="snow" width="512" height="512"/>
+        <image name="wind" width="512" height="512"/>
+    </resources>
 </document>

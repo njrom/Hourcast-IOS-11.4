@@ -8,11 +8,12 @@
 
 import UIKit
 import CoreLocation
+import Alamofire
+import SwiftyJSON
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
 
-    // IBOutlets for Selected Hours Weather 
-    @IBOutlet weak var backgroundImageView: UIImageView!
+    // IBOutlets for Selected Hours Weather
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var selectedWeatherImageView: UIImageView!
@@ -24,12 +25,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var hourStacks : [UIStackView]!
     
 
-    let WEATHER_URL = "https://api.openweathermap.org/data/2.5/forecast"
-    let APP_ID = "a87ba5e03928db05eebc6909808825ff"
+    let WEATHER_URL = "https://api.darksky.net/forecast/"
+    let APP_ID = "8cf720cd198a09ad0ad9779de720ae77"
     
     
     let locationManager = CLLocationManager()
-    
     let weatherFetcher = WeatherDataFetcher()
     
     override func viewDidLoad() {
@@ -40,7 +40,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         
-        
+        titleLabel.text = 
         if let stacks = hourStacks {
            for stack in stacks { // Adding Tapping abilities to each of the hour stacks
                 let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hourTapped(tapGestureRecognizer:)))
@@ -51,6 +51,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         } else {
             print("Error Hour Stacks were not linked properly")
         }
+        
     }
     
     
@@ -64,6 +65,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             selectedWeatherImageView.image = hourImageViews[index].image
             hourLabels[index].backgroundColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 0.5)
             //TODO: implement switcher (current weather switches to weather at index)
+            if weatherFetcher.hourlyWeather.indices.contains(index){
+                updateSelectedData(hour: weatherFetcher.hourlyWeather[index])
+            }
         } else {
             print("Error with stack linkage")
         }
@@ -80,13 +84,67 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             let latitude = location.coordinate.latitude
             let longitude = location.coordinate.longitude
             let params : [String : String] = ["lat": String(latitude), "lon": String(longitude),"appid":APP_ID]
+            fetchWeatherData(url: WEATHER_URL, parameters: params)
             
-            weatherFetcher.fetchWeatherData(url: WEATHER_URL, parameters: params)
+            
         }
     }
     
+    var hourlyWeather = [HourWeather]()
+    func fetchWeatherData(url: String, parameters: [String : String]) {
+        
+        Alamofire.request(url+parameters["appid"]!+"/\(parameters["lat"]!),\(parameters["lon"]!)").responseJSON {
+            response in
+            if response.result.isSuccess {
+                print("Success! Got the weather data")
+                let weatherJSON : JSON = JSON(response.result.value!)
+                print(weatherJSON)
+                self.updateWeatherData(json: weatherJSON)
+                
+            }
+            else {
+                print("Error \(response.result.error!)")
+            }
+        }
+    }
+    // Parses the weather data and returns required HourWeather Array
+    func updateWeatherData(json : JSON) {
+        var date : String
+        var time : String
+        for i in 0..<4 {
+            let hourJSON = json["hourly"]["data"][i]
+            (date, time) = parseDate(jsonDate: hourJSON["time"].intValue)
+            weatherFetcher.hourlyWeather.append(HourWeather(date: date, eventTime: time , temp: hourJSON["temperature"].stringValue, condition: hourJSON["icon"].stringValue))
+        }
+        updateDataOnScreen(hourlyData: weatherFetcher.hourlyWeather)
+        updateSelectedData(hour: weatherFetcher.hourlyWeather[0])
+    }
     
     
+    func parseDate(jsonDate : Int) -> (String, String) {
+        
+            let date = NSDate(timeIntervalSince1970: TimeInterval(jsonDate))
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MMMM d, yyyy"
+            let dateString = dateFormatter.string(from: date as Date)
+        dateFormatter.dateFormat = "h:mm a"
+            let timeString = dateFormatter.string(from: date as Date)
+            return(dateString, timeString)
+       
+    }
     
+    func updateDataOnScreen(hourlyData : [HourWeather] ) {
+        print("trying to update")
+        for index in 0..<hourlyData.count {
+            hourLabels[index].text = hourlyData[index].hour
+            hourImageViews[index].image = UIImage(named: hourlyData[index].iconName)
+        }
+    }
+    
+    func updateSelectedData(hour: HourWeather) {
+        dateLabel.text = "\(hour.dayDate) \(hour.hour)"
+        selectedWeatherImageView.image = UIImage(named : hour.iconName)
+        temperatureLabel.text = "\(hour.temperature)º F"
+    }
 }
 

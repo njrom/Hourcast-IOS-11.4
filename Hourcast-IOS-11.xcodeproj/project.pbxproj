@@ -74,6 +74,7 @@
 		AF7E4EE221640AEA00F11C58 /* Hourcast-IOS-11 */ = {
 			isa = PBXGroup;
 			children = (
+				AFEA475D2165AE1300DBB46F /* Localizeable */,
 				AF7E4EF921642F1C00F11C58 /* Model */,
 				AFFBEBD621652CB700885E21 /* Controller */,
 				AFFBEBD721652CD400885E21 /* View */,
@@ -91,6 +92,13 @@
 				AF9C508421645E7C006BFDFB /* WeatherDataFetcher.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		AFEA475D2165AE1300DBB46F /* Localizeable */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Localizeable;
 			sourceTree = "<group>";
 		};
 		AFFBEBD621652CB700885E21 /* Controller */ = {
