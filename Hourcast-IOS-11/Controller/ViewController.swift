@@ -18,12 +18,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var selectedWeatherImageView: UIImageView!
     @IBOutlet weak var temperatureLabel: UILabel!
-    
+    @IBOutlet weak var summaryLabel: UILabel!
     // IBOutlets for Hourly Stack
     @IBOutlet var hourImageViews : [UIImageView]!
     @IBOutlet var hourLabels : [UILabel]!
     @IBOutlet var hourStacks : [UIStackView]!
     
+    var tappedLabel : UILabel? // To manage highlighting of current label
 
     let WEATHER_URL = "https://api.darksky.net/forecast/"
     let APP_ID = "8cf720cd198a09ad0ad9779de720ae77"
@@ -35,12 +36,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Colors
+        view.backgroundColor = UIColor(red:0.48, green:0.65, blue:0.82, alpha:1.0)
+        
+        tappedLabel = hourLabels[0]
+        tappedLabel!.backgroundColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 0.5)
+        
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         
-        titleLabel.text = 
+        titleLabel.text = NSLocalizedString("str_titleLabel", comment: "")
         if let stacks = hourStacks {
            for stack in stacks { // Adding Tapping abilities to each of the hour stacks
                 let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hourTapped(tapGestureRecognizer:)))
@@ -57,13 +64,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @objc func hourTapped(tapGestureRecognizer: UITapGestureRecognizer) {
         let tappedStack = tapGestureRecognizer.view as! UIStackView
-        for label in hourLabels {
-            label.backgroundColor = UIColor.clear //TODO: Fix this make it better
-        }
+        tappedLabel!.backgroundColor = UIColor.clear //TODO: Fix this make it better
         if let index = hourStacks?.index(of: tappedStack) {
             print(index)
             selectedWeatherImageView.image = hourImageViews[index].image
-            hourLabels[index].backgroundColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 0.5)
+            tappedLabel = hourLabels[index]
+            tappedLabel!.backgroundColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 0.5)
             //TODO: implement switcher (current weather switches to weather at index)
             if weatherFetcher.hourlyWeather.indices.contains(index){
                 updateSelectedData(hour: weatherFetcher.hourlyWeather[index])
@@ -114,7 +120,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         for i in 0..<4 {
             let hourJSON = json["hourly"]["data"][i]
             (date, time) = parseDate(jsonDate: hourJSON["time"].intValue)
-            weatherFetcher.hourlyWeather.append(HourWeather(date: date, eventTime: time , temp: hourJSON["temperature"].stringValue, condition: hourJSON["icon"].stringValue))
+            weatherFetcher.hourlyWeather.append(HourWeather(date: date, eventTime: time , temp: hourJSON["temperature"].stringValue, condition: hourJSON["icon"].stringValue, desc: hourJSON["summary"].stringValue))
         }
         updateDataOnScreen(hourlyData: weatherFetcher.hourlyWeather)
         updateSelectedData(hour: weatherFetcher.hourlyWeather[0])
@@ -127,7 +133,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "MMMM d, yyyy"
             let dateString = dateFormatter.string(from: date as Date)
-        dateFormatter.dateFormat = "h:mm a"
+        dateFormatter.dateFormat = "h a"
             let timeString = dateFormatter.string(from: date as Date)
             return(dateString, timeString)
        
@@ -145,6 +151,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         dateLabel.text = "\(hour.dayDate) \(hour.hour)"
         selectedWeatherImageView.image = UIImage(named : hour.iconName)
         temperatureLabel.text = "\(hour.temperature)º F"
+        summaryLabel.text = hour.summary
     }
 }
 

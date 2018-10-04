@@ -14,6 +14,7 @@
 		AF7E4EEE21640AEB00F11C58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7E4EEC21640AEB00F11C58 /* LaunchScreen.storyboard */; };
 		AF7E4EF821642A5A00F11C58 /* HourWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7E4EF721642A5A00F11C58 /* HourWeather.swift */; };
 		AF9C508521645E7C006BFDFB /* WeatherDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9C508421645E7C006BFDFB /* WeatherDataFetcher.swift */; };
+		AFEA47612165AEAB00DBB46F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AFEA475F2165AEAB00DBB46F /* Localizable.strings */; };
 		DBEB427A0447C4D6DFFD11D5 /* Pods_Hourcast_IOS_11.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B7D7B21B273F9F87BC730D0 /* Pods_Hourcast_IOS_11.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		AF7E4EEF21640AEB00F11C58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF7E4EF721642A5A00F11C58 /* HourWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourWeather.swift; sourceTree = "<group>"; };
 		AF9C508421645E7C006BFDFB /* WeatherDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataFetcher.swift; sourceTree = "<group>"; };
+		AFEA47602165AEAB00DBB46F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +99,17 @@
 		AFEA475D2165AE1300DBB46F /* Localizeable */ = {
 			isa = PBXGroup;
 			children = (
+				AFEA475E2165AE7900DBB46F /* en.lproj */,
 			);
 			path = Localizeable;
+			sourceTree = "<group>";
+		};
+		AFEA475E2165AE7900DBB46F /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				AFEA475F2165AEAB00DBB46F /* Localizable.strings */,
+			);
+			path = en.lproj;
 			sourceTree = "<group>";
 		};
 		AFFBEBD621652CB700885E21 /* Controller */ = {
@@ -187,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF7E4EEE21640AEB00F11C58 /* LaunchScreen.storyboard in Resources */,
+				AFEA47612165AEAB00DBB46F /* Localizable.strings in Resources */,
 				AF7E4EEB21640AEB00F11C58 /* Assets.xcassets in Resources */,
 				AF7E4EE921640AEA00F11C58 /* Main.storyboard in Resources */,
 			);
@@ -264,6 +276,14 @@
 				AF7E4EED21640AEB00F11C58 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		AFEA475F2165AEAB00DBB46F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFEA47602165AEAB00DBB46F /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -398,7 +418,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.njrom.Hourcast-IOS-11";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -417,7 +437,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.njrom.Hourcast-IOS-11";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

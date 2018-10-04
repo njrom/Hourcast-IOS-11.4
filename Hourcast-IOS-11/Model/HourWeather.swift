@@ -12,16 +12,18 @@ class HourWeather {
     
     var dayDate : String
     var temperature : String
+    var summary : String
     var iconName : String
     var hour : String
     
-    init(date: String, eventTime: String , temp: String, condition : String) {
+    init(date: String, eventTime: String , temp: String, condition : String, desc : String) {
         
         dayDate = date
         hour = eventTime
         iconName = condition
         let index = temp.index(temp.startIndex, offsetBy: 3)
         temperature = String(temp[...index])
+        summary = desc
         
     }
     
